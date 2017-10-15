@@ -1,0 +1,17 @@
+<template>
+  <div style="text-align: center;">
+      <h1>Välkommen till träningen...</h1>
+      <p>Lös denna uppgift: ${number1} * ${number2} 
+        <!-- <img src="images/refresh.jpg" width="30px" height="30px" click.trigger="refreshNumbers()" /> -->
+      </p>
+      <p>Tid kvar för svar: ${timerCountdown}</p>
+      <form submit.delegate="answerQuery()">
+        <input type="number" value.bind="userResponse" disabled.bind="timeHasRunOut" focus.bind="textfieldHasFocus" />
+        <button type="submit">Svar</button>
+      </form>
+    
+      <!-- <p>${isCorrectAnswer}</p> -->
+      <p>Antal rätt: ${numberOfCorrect}</p>
+      <p>antal fel:  ${numberOfIncorrect}</p>
+  </div>
+</template>
